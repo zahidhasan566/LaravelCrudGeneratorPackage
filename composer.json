@@ -3,6 +3,21 @@
     "description": "This package will generate a  crud operation within a few time",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "laravel",
+        "crud",
+        "rest",
+        "generator",
+        "rest-api",
+        "laravel-package",
+        "crud-generator",
+        "laravel-crud-generator",
+        "composer-package",
+        "laravel-crud",
+        "laravel8",
+        "laravel9",
+        "laravel10"
+    ],
     "autoload": {
         "psr-4": {
             "Crudoperation\\": "src/"
@@ -13,5 +28,15 @@
             "name": "Md Zahid Hasan"
         }
     ],
+    "extra":
+    {
+        "laravel":
+        {
+            "providers":
+            [
+                "crudoperation\\CrudgenServiceProvider"
+            ]
+        }
+    },
     "require": {}
 }
