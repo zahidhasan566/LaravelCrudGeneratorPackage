@@ -1,0 +1,17 @@
+{
+    "name": "crudgenerator/crudoperation",
+    "description": "This package will generate a  crud operation within a few time",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Crudoperation\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Md Zahid Hasan"
+        }
+    ],
+    "require": {}
+}
