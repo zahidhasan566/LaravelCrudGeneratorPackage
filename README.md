@@ -1,4 +1,4 @@
-# Laravel Crud Generator Package Package
+# Laravel Crud Generator Package
 
 [![Latest Version](https://img.shields.io/github/release/zahidhasan566/loginInfoPackage.svg?style=flat-square)](https://github.com/zahidhasan566/loginInfoPackage/releases)
 
@@ -40,18 +40,18 @@ php artisan vendor:publish --provider="Crudoperation\CrudServiceProvider"
 php artisan vendor:publish --provider="Crudoperation\CrudServiceProvider"
 ```
 
-suppose we are going to make a NewsPortal
+suppose we are going to make a NewsPortal.
 
 A `News` has many (hasMany) `Comment` and belongs to many (belongsToMany) `Tag`
 
-A `News` can have a `title` and a `content` fields
+A `News` can have a `title` and a `content` fields.
 
 ### Step 1
 ``` php artisan make:crud nameOfYourCrudFile "column1:type, column2:type" ```
 
 ``` (Example: ) php artisan make:crud news "title:string, content:text" ```
 
-When you call this command, controller, views files will be generated
+When you call this command, controller, views files will be generated.
 
 ### Step 2
 Then we have to add  an `hasMany` relationship between our `News` and `Comment`
