@@ -34,7 +34,7 @@
         {
             "providers":
             [
-                "crudoperation\\CrudgenServiceProvider"
+                "Crudoperation\\CrudServiceProvider"
             ]
         }
     },
