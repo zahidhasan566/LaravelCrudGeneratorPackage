@@ -61,13 +61,17 @@ class MakeControllerService
         return $controllerStub;
     }
 
-    public function createControllerFile($pathNewController, $controllerStub, $namingConvention)
+    public function createControllerFile($pathNewController, $controllerStub, $namingConvention,$pathNewRoutes,$routeName)
     {
         if(!File::exists($pathNewController))
         {
             File::put($pathNewController, $controllerStub);
             $this->line("<info>Created Controller:</info> ".$namingConvention['plural_name']);
-            $this->info("Don't forget to add routes (in web.php) like this : Route::resource('".$namingConvention['plural_low_name']."', ".$namingConvention['plural_name']."Controller::class);");
+            $this->info("Don't forget to  import routes (in web.php) like this : Route::resource('".$namingConvention['plural_low_name']."', ".$namingConvention['plural_name']."Controller::class);");
+
+            $myfile = fopen($pathNewRoutes, "a") or die("Unable to open file!");
+            fwrite($myfile, $routeName);
+            fclose($myfile);
         }
         else
             $this->error('Controller '.$namingConvention['plural_name'].' already exists');
@@ -80,6 +84,9 @@ class MakeControllerService
 
         // if our controller doesn't exists we create it
         $pathNewController = $this->pathsAndNamespacesService->getRealpathBaseCustomController($namingConvention);
-        $this->createControllerFile($pathNewController, $controllerStub, $namingConvention);
+        $pathNewRoutes = $this->pathsAndNamespacesService->getRealpathBaseRoutes($namingConvention);
+        $addingNewLine = "\n";
+        $routeName= $addingNewLine."Route::resource('".$namingConvention['plural_low_name']."', ".$namingConvention['plural_name']."Controller::class);";
+        $this->createControllerFile($pathNewController, $controllerStub, $namingConvention,$pathNewRoutes,$routeName);
     }
 }

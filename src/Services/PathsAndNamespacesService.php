@@ -35,6 +35,10 @@ class PathsAndNamespacesService
     {
         return $this->getRealpathBase('app'.DIRECTORY_SEPARATOR.'Http'.DIRECTORY_SEPARATOR.'Controllers');
     }
+    public function getRealpathBaseRoutes()
+    {
+        return $this->getRealpathBase('routes'.DIRECTORY_SEPARATOR.'web.php');
+    }
 
     public function getRealpathBaseCustomController($namingConvention): string
     {
