@@ -58,8 +58,8 @@ and a `belongsToMany` with `Tag`
 
 ### Step 3
 ### Migration
-To migrate your files, just use this command
-``` (Example: php artisan migrate  ) ```
+To migrate your files, just use this command :
+```php artisan migrate```
 
 ### Step 4
 ### Routes
