@@ -36,9 +36,6 @@ php artisan vendor:publish --provider="Crudoperation\CrudServiceProvider"
 ## Usage
 
 ### Create a CRUD Operation
-```
-php artisan vendor:publish --provider="Crudoperation\CrudServiceProvider"
-```
 
 suppose we are going to make a NewsPortal.
 
