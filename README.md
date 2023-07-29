@@ -48,20 +48,25 @@ A `News` can have a `title` and a `content` fields.
 
 ``` (Example: ) php artisan make:crud news "title:string, content:text" ```
 
-When you call this command, controller, views files will be generated.
+When you call this command, controller, views files will be generated. Route will be written in Routes->web.php file.
 
 ### Step 2
 Then we have to add  an `hasMany` relationship between our `News` and `Comment`
 and a `belongsToMany` with `Tag`
 
-`News` model and migrate file will be generated. 
+`News` model and migrate files will be generated. 
 
 ### Step 3
+### Migration
+To Migrate your files , just use this command
+``` (Example: ) php artisan migrate" ```
+
+### Step 4
 ### Routes
 
-To create your routes, you have to do this:
+To run your routes, you have to import the route this:
 
-``` Route::resource('news', NewsController::class); ```
+``` Route::resource('news', NewsController::class); -> use App\Http\Controllers\NewsController;  ```
 
 ## Remove any CRUD
 
