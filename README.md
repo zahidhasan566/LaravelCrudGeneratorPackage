@@ -58,13 +58,13 @@ and a `belongsToMany` with `Tag`
 
 ### Step 3
 ### Migration
-To Migrate your files , just use this command
-``` (Example: ) php artisan migrate" ```
+To migrate your files, just use this command
+``` (Example: ) php artisan migrate ```
 
 ### Step 4
 ### Routes
 
-To run your routes, you have to import the route this:
+To run your routes, you have to import the route like this:
 
 ``` Route::resource('news', NewsController::class); -> use App\Http\Controllers\NewsController;  ```
 
