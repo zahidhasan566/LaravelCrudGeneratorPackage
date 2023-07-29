@@ -12,7 +12,7 @@
 - php 8.1
 
 ## Features
-- Controller, Model, View , Migration files will be created by a single command.
+- Controller, Model, View , Migration, Routes  files will be created by a single command.
 - User can define the relationship model.
 - User can do crud operation without writing long code.
 
